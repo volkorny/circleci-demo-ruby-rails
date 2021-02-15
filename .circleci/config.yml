@@ -11,10 +11,10 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Clone ci-commands example
           command: |
-            mkdir -p newrepo
-            git clone https://github.com/volkorny/shippable-test-project-1 newrepo
-            ls -lah newrepo
+            git clone https://github.com/volkorny/shippable-test-project-1 commands
+            ls -lah commands
       - ruby/install-deps
       # Store bundle cache
       - node/install-packages:
